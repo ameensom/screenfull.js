@@ -94,7 +94,9 @@
 			}
 		},
 		exit: function () {
-			document[fn.exitFullscreen]();
+			if (document.fullscreen) {
+		                document[fn.exitFullscreen]();
+		        }
 		},
 		toggle: function (elem) {
 			if (this.isFullscreen) {
